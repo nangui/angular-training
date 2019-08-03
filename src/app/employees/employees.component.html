@@ -1,5 +1,9 @@
-<h1>Employees Component</h1>
+<p *ngIf="isFetching">Fetching data...</p>
 
-<ul>
-  <li *ngFor="let employee of employeeList" (click)="onRemoveEmployee(employee)">{{ employee }}</li>
-</ul>
+<div *ngIf="!isFetching">
+  <h1>Employees Component</h1>
+
+  <ul>
+    <li *ngFor="let employee of employeeList" (click)="onRemoveEmployee(employee)">{{ employee }}</li>
+  </ul>
+</div>
